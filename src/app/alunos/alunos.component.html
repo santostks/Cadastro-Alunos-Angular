@@ -1,5 +1,6 @@
 <h2>Todos os Alunos</h2>
 <app-aluno-detail [aluno]="selectedAluno"></app-aluno-detail>
+
 <ul class="alunos">
   <li *ngFor="let aluno of alunos">
     <button [class.selected]="aluno === selectedAluno" type="button" (click)="onSelect(aluno)">

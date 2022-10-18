@@ -1,0 +1,17 @@
+table{
+  font-size: 1.5em;
+  background-color: bisque;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+td{
+  border-style: dashed;
+  border-radius: 10px;
+}
+
+input{
+  font-size: 0.8em;
+}
+
+
+
