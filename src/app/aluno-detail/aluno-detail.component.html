@@ -1,0 +1,25 @@
+<div *ngIf="aluno">
+
+  <h2>{{aluno.name | uppercase}} Detalhes</h2>
+  <div><span>ID: </span>{{aluno.id}}</div>
+
+  <table>
+    <tr>
+      <th><label for="aluno-name">Nome</label></th>
+      <th><label for="aluno-curso">Curso</label></th>
+      <th><label for="aluno-RA">RA</label></th>
+      <th><label for="aluno-turno">Turno</label></th>
+    </tr>
+    <tr>
+      <td><input id="aluno-name" [(ngModel)]="aluno.name" placeholder="name"></td>
+      <td><input id="aluno-curso" [(ngModel)]="aluno.curso" placeholder="curso"></td>
+      <td><input id="aluno-RA" [(ngModel)]="aluno.RA" placeholder="RA"></td>
+      <td><input id="aluno-turno" [(ngModel)]="aluno.turno" placeholder="turno"></td>
+    </tr>
+  </table>
+  <div>
+
+
+  </div>
+
+</div>

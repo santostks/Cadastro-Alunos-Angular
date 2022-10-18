@@ -3,5 +3,6 @@ export interface Aluno {
   name: string;
   curso: string;
   RA: number;
+  turno: string;
 }
 
