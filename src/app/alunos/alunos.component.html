@@ -1,1 +1,6 @@
-<p>alunos works!</p>
+<h2>{{aluno.name | uppercase}} Details</h2>
+<div><span>ID: </span>{{aluno.id}}</div>
+<div>
+  <label for="name">Nome: </label>
+  <input id="name" [(ngModel)]="aluno.name" placeholder="name">
+</div>
