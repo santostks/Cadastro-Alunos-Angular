@@ -1,6 +1,24 @@
-<h2>{{aluno.name | uppercase}} Details</h2>
-<div><span>ID: </span>{{aluno.id}}</div>
-<div>
-  <label for="name">Nome: </label>
-  <input id="name" [(ngModel)]="aluno.name" placeholder="name">
+<div *ngIf="selectedAluno">
+  <h2>{{selectedAluno.name | uppercase}} Detalhes</h2>
+  <div>id: {{selectedAluno.id}}</div>
+  <div>
+    <label for="aluno-name">Nome: </label>
+    <input id="aluno-name" [(ngModel)]="selectedAluno.name" placeholder="name"><br>
+    <label for="aluno-name">Curso: </label>
+    <input id="aluno-curso" [(ngModel)]="selectedAluno.curso" placeholder="curso"><br>
+    <label for="aluno-name">RA: </label>
+    <input id="aluno-RA" [(ngModel)]="selectedAluno.RA" placeholder="RA">
+  </div>
 </div>
+
+<h2>Todos os Alunos</h2>
+<ul class="alunos">
+  <li *ngFor="let aluno of alunos">
+    <button [class.selected]="aluno === selectedAluno" type="button" (click)="onSelect(aluno)">
+      <span class="badge">{{aluno.id}}</span>
+      <span class="name">{{aluno.name}}</span>
+    </button>
+  </li>
+</ul>
+
+
